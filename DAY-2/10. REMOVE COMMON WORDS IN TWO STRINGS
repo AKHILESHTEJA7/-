@@ -1,0 +1,18 @@
+frequency2 = Counter(sentence2)
+ word = 0 
+ for i in range(len(sentence1)):
+  if sentence1[word] in frequency2.keys():
+   sentence1.pop(word)
+   word = word-1
+  word += 1  
+ word = 0
+ for i in range(len(sentence2)):
+  if sentence2[word] in frequency1.keys():
+   sentence2.pop(word)
+   word = word-1  
+  word += 1
+ print(*sentence1)
+ print(*sentence2)
+sentence1 = "sky is blue in color"
+sentence2 = "raj likes sky blue color"
+removeCommonWords(sentence1, sentence2)
